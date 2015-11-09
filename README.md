@@ -1,4 +1,4 @@
-# DMTK: 
+# DMTK
 
 Distributed Machine Learning Tookit [http://www.dmtk.io](http://www.dmtk.io)
 
