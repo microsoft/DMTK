@@ -1,4 +1,6 @@
-# DMTK: Distributed Machine Learning Tookit [http://www.dmtk.io](http://www.dmtk.io)
+# DMTK: 
+
+Distributed Machine Learning Tookit [http://www.dmtk.io](http://www.dmtk.io)
 
 DMTK includes the following projects:
 * [DMTK framework(Multiverso)](https://github.com/Microsoft/multiverso): The parameter server framework for distributed machine learning.
