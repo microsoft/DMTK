@@ -63,21 +63,21 @@ RUN rm  /usr/local/hadoop/lib/native/* \
 
 
 WORKDIR /dmtk
-#RUN cd /dmtk && git clone git@github.com:Microsoft/multiverso.git . && \
-#    cd multiverso && \
-#    make -j4 all && \
-#    cd /dmtk && git clone git@github.com:Microsoft/distributed_word_embedding.git.git . && \
-#    cd distributed_word_embedding && \
-#    ln /dmtk/multiverso multiverso && \
-#    make -j4 && \
-#    cd /dmtk && git clone git@github.com:Microsoft/distributed_skipgram_mixture.git.git . && \
-#    cd distributed_skipgram_mixture && \
-#    ln /dmtk/multiverso multiverso && \
-#    make -j4 && \
-#    cd /dmtk && git clone git@github.com:Microsoft/lightlda.git.git . && \
-#    cd lightlda && \
-#    ln /dmtk/multiverso multiverso && \
-#    make -j4
+RUN cd /dmtk && git clone https://github.com/Microsoft/multiverso.git . && \
+    cd multiverso && \
+    make -j4 all && \
+    cd /dmtk && git clone https://github.com/Microsoft/distributed_word_embedding.git.git . && \
+    cd distributed_word_embedding && \
+    ln /dmtk/multiverso multiverso && \
+    make -j4 && \
+    cd /dmtk && git clone https://github.com/Microsoft/distributed_skipgram_mixture.git.git . && \
+    cd distributed_skipgram_mixture && \
+    ln /dmtk/multiverso multiverso && \
+    make -j4 && \
+    cd /dmtk && git clone https://github.com/Microsoft/lightlda.git.git . && \
+    cd lightlda && \
+    ln /dmtk/multiverso multiverso && \
+    make -j4
    
 # clean unnessary packages
 RUN apt-get clean \
