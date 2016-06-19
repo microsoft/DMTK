@@ -5,7 +5,7 @@ USER root
 
 # install dev tools
 RUN apt-get update \
-    && apt-get install -qqy 
+    && apt-get install -qqy \
        curl \
        tar \
        g++-4.8 \
@@ -62,18 +62,18 @@ RUN rm  /usr/local/hadoop/lib/native/* \
 
 
 WORKDIR /dmtk
-RUN cd /dmtk && git clone git@github.com:Microsoft/multiverso.git . && 
+RUN cd /dmtk && git clone git@github.com:Microsoft/multiverso.git . && \
     cd multiverso && \
     make -j4 all
-RUN cd /dmtk && git clone git@github.com:Microsoft/distributed_word_embedding.git.git . && 
+RUN cd /dmtk && git clone git@github.com:Microsoft/distributed_word_embedding.git.git . && \
     cd distributed_word_embedding && \
     ln /dmtk/multiverso multiverso && \
     make -j4
-RUN cd /dmtk && git clone git@github.com:Microsoft/distributed_skipgram_mixture.git.git . && 
+RUN cd /dmtk && git clone git@github.com:Microsoft/distributed_skipgram_mixture.git.git . && \
     cd distributed_skipgram_mixture && \
     ln /dmtk/multiverso multiverso && \
     make -j4
-RUN cd /dmtk && git clone git@github.com:Microsoft/lightlda.git.git . && 
+RUN cd /dmtk && git clone git@github.com:Microsoft/lightlda.git.git . && \
     cd lightlda && \
     ln /dmtk/multiverso multiverso && \
     make -j4
