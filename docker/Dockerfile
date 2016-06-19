@@ -19,7 +19,8 @@ RUN apt-get update \
        build-essential \
        automake \
        vim \
-       gdb
+       gdb \
+       git
 
 # Cmake
 RUN curl -sc 0 https://cmake.org/files/v3.4/cmake-3.4.1-Linux-x86_64.tar.gz | tar -xz -C /usr/local  \
