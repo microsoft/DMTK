@@ -5,7 +5,7 @@ USER root
 
 RUN cd /dmtk && git clone --depth=1 -b multiverso-initial https://github.com/Microsoft/multiverso multiverso_v1 && \
     cd multiverso_v1 && \
-    make -f MakefileDocker -j4 all
+    make -f MakefileDocker -j4
 RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/lightlda.git lightlda && \
     cd lightlda && \
     rm -rf multiverso && \
