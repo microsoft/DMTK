@@ -79,34 +79,28 @@ RUN wget -qc -t 0 http://download.zeromq.org/zeromq-4.1.3.tar.gz \
 RUN wget https://raw.githubusercontent.com/zeromq/cppzmq/master/zmq.hpp \
   && mv zmq.hpp /usr/local/include 
 
-# MPICH2
-RUN wget -q -O - http://www.mpich.org/static/downloads/3.0.4/mpich-3.0.4.tar.gz | tar -xzf - && \
-    cd mpich-3.0.4 && \
-    ./configure --prefix=/usr/local/mpich && \
-    make -j"$(nproc)" install && \
-    rm -rf /mpich-3.0.4 
+ENV LD_LIBRARY_PATH /usr/local/lib:$LD_LIBRARY_PATH
 
-ENV CPLUS_INCLUDE_PATH /usr/local/mpich/include:CPLUS_INCLUDE_PATH
-ENV PATH /usr/local/mpich/bin:$PATH
-ENV LD_LIBRARY_PATH /usr/local/mpich/lib:$LD_LIBRARY_PATH
+# MPICH2
+#RUN wget -q -O - http://www.mpich.org/static/downloads/3.0.4/mpich-3.0.4.tar.gz | tar -xzf - && \
+#    cd mpich-3.0.4 && \
+#    ./configure --prefix=/usr/local/mpich && \
+#    make -j"$(nproc)" install && \
+#    rm -rf /mpich-3.0.4 #
+
+#ENV CPLUS_INCLUDE_PATH /usr/local/mpich/include:CPLUS_INCLUDE_PATH
+#ENV PATH /usr/local/mpich/bin:$PATH
+#ENV LD_LIBRARY_PATH /usr/local/mpich/lib:$LD_LIBRARY_PATH
 
 WORKDIR /dmtk
-#RUN cd /dmtk && git clone --depth=1 -b multiverso-initial https://github.com/Microsoft/multiverso multiverso && \
-#    cd multiverso && \
-#    make -j4 all#
-
-#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/distributed_word_embedding.git distributed_word_embedding && \
-#    cd distributed_word_embedding && \
-#    ln /dmtk/multiverso multiverso && \
-#    make -j4
-#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/distributed_skipgram_mixture.git distributed_skipgram_mixture && \
-#    cd distributed_skipgram_mixture && \
-#    ln /dmtk/multiverso multiverso && \
-#    make -j4
-#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/lightlda.git lightlda && \
-#    cd lightlda && \
-#    ln /dmtk/multiverso multiverso && \
-#    make -j4
+RUN cd /dmtk && git clone --depth=1 -b multiverso-initial https://github.com/Microsoft/multiverso multiverso_v1 && \
+    cd multiverso_v1 && \
+    make -j4 all#
+RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/lightlda.git lightlda && \
+    cd lightlda && \
+    rm -rf multiverso && \
+    ln -s /dmtk/multiverso_v1 multiverso && \
+    make -j4
    
 # clean unnessary packages
 RUN apt-get clean \
