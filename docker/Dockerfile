@@ -61,9 +61,25 @@ RUN sed -i '/^export HADOOP_CONF_DIR/ s:.*:export HADOOP_CONF_DIR=/usr/local/had
 RUN rm  /usr/local/hadoop/lib/native/* \
     && curl -Ls http://dl.bintray.com/sequenceiq/sequenceiq-bin/hadoop-native-64-2.6.0.tar | tar -x -C /usr/local/hadoop/lib/native/
 
+# Build ZeroMQ
+# Make sure that libtool, pkg-config, build-essential, autoconf and automake
+# are installed.
+RUN wget -qc -t 0 http://download.zeromq.org/zeromq-4.1.3.tar.gz \
+  && tar -zxvf zeromq-4.1.3.tar.gz \
+  && rm zeromq-4.1.3.tar.gz \
+  && cd zeromq-4.1.3 \
+  && ./configure --prefix=/usr/local --without-libsodium \
+    && make -j4 \
+  && make install -j4 \
+  && cd .. \
+  && rm -rf zeromq-4.1.3 
 
+# Get the C++ Wrapper zmq.hpp
+RUN wget https://raw.githubusercontent.com/zeromq/cppzmq/master/zmq.hpp \
+  && mv zmq.hpp /usr/local/include 
+  
 WORKDIR /dmtk
-#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/multiverso/tree/9ed99cd2d3080a8683d1c511de5927e2b7274438 multiverso && \
+#RUN cd /dmtk && git clone --depth=1 -b multiverso-initial https://github.com/Microsoft/multiverso multiverso && \
 #    cd multiverso && \
 #    make -j4 all#
 
