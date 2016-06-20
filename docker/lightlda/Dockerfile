@@ -11,9 +11,5 @@ RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/lightlda.git li
     rm -rf multiverso && \
     ln -s /dmtk/multiverso_v1 multiverso && \
     make -f MakefileDocker -j4
-  
-# clean unnessary packages
-RUN apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
 
 ENV PATH /dmtk/lightlda/bin:$PATH
