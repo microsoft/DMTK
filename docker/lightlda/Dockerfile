@@ -93,15 +93,15 @@ ENV LD_LIBRARY_PATH /usr/local/lib:$LD_LIBRARY_PATH
 #ENV LD_LIBRARY_PATH /usr/local/mpich/lib:$LD_LIBRARY_PATH
 
 WORKDIR /dmtk
-#RUN cd /dmtk && git clone --depth=1 -b multiverso-initial https://github.com/Microsoft/multiverso multiverso_v1 && \
-#    cd multiverso_v1 && \
-#    make -f MakefileDocker -j4 all#
-#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/lightlda.git lightlda && \
-#    cd lightlda && \
-#    rm -rf multiverso && \
-#    ln -s /dmtk/multiverso_v1 multiverso && \
-#    make -f MakefileDocker -j4
-   
+RUN cd /dmtk && git clone --depth=1 -b multiverso-initial https://github.com/Microsoft/multiverso multiverso_v1 && \
+    cd multiverso_v1 && \
+    make -f MakefileDocker -j4 all#
+RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/lightlda.git lightlda && \
+    cd lightlda && \
+    rm -rf multiverso && \
+    ln -s /dmtk/multiverso_v1 multiverso && \
+    make -f MakefileDocker -j4
+  
 # clean unnessary packages
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
