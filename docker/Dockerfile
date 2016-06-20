@@ -97,5 +97,3 @@ WORKDIR /dmtk
 # clean unnessary packages
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-ENV PATH /dmtk/lightlda/bin:$PATH
