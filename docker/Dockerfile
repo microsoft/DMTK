@@ -63,21 +63,22 @@ RUN rm  /usr/local/hadoop/lib/native/* \
 
 
 WORKDIR /dmtk
-RUN cd /dmtk && git clone https://github.com/Microsoft/multiverso.git . && \
-    cd multiverso && \
-    make -j4 all && \
-    cd /dmtk && git clone https://github.com/Microsoft/distributed_word_embedding.git.git . && \
-    cd distributed_word_embedding && \
-    ln /dmtk/multiverso multiverso && \
-    make -j4 && \
-    cd /dmtk && git clone https://github.com/Microsoft/distributed_skipgram_mixture.git.git . && \
-    cd distributed_skipgram_mixture && \
-    ln /dmtk/multiverso multiverso && \
-    make -j4 && \
-    cd /dmtk && git clone https://github.com/Microsoft/lightlda.git.git . && \
-    cd lightlda && \
-    ln /dmtk/multiverso multiverso && \
-    make -j4
+#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/multiverso/tree/9ed99cd2d3080a8683d1c511de5927e2b7274438 multiverso && \
+#    cd multiverso && \
+#    make -j4 all#
+
+#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/distributed_word_embedding.git distributed_word_embedding && \
+#    cd distributed_word_embedding && \
+#    ln /dmtk/multiverso multiverso && \
+#    make -j4
+#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/distributed_skipgram_mixture.git distributed_skipgram_mixture && \
+#    cd distributed_skipgram_mixture && \
+#    ln /dmtk/multiverso multiverso && \
+#    make -j4
+#RUN cd /dmtk && git clone --depth=1 https://github.com/Microsoft/lightlda.git lightlda && \
+#    cd lightlda && \
+#    ln /dmtk/multiverso multiverso && \
+#    make -j4
    
 # clean unnessary packages
 RUN apt-get clean \
