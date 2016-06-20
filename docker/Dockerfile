@@ -33,8 +33,9 @@ RUN wget -q -O - https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-
     cd openmpi-1.10.1 && \
     ./configure --prefix=/usr/local/mpi && \
     make -j"$(nproc)" install && \
-    rm -rf /openmpi-1.10.1
+    rm -rf /openmpi-1.10.1 
 
+ENV CPLUS_INCLUDE_PATH /usr/local/mpi/include:CPLUS_INCLUDE_PATH
 ENV PATH /usr/local/mpi/bin:$PATH
 ENV LD_LIBRARY_PATH /usr/local/mpi/lib:$LD_LIBRARY_PATH
 
@@ -77,7 +78,18 @@ RUN wget -qc -t 0 http://download.zeromq.org/zeromq-4.1.3.tar.gz \
 # Get the C++ Wrapper zmq.hpp
 RUN wget https://raw.githubusercontent.com/zeromq/cppzmq/master/zmq.hpp \
   && mv zmq.hpp /usr/local/include 
-  
+
+# MPICH2
+RUN wget -q -O - http://www.mpich.org/static/downloads/3.0.4/mpich-3.0.4.tar.gz | tar -xzf - && \
+    cd mpich-3.0.4 && \
+    ./configure --prefix=/usr/local/mpich && \
+    make -j"$(nproc)" install && \
+    rm -rf /mpich-3.0.4 
+
+ENV CPLUS_INCLUDE_PATH /usr/local/mpich/include:CPLUS_INCLUDE_PATH
+ENV PATH /usr/local/mpich/bin:$PATH
+ENV LD_LIBRARY_PATH /usr/local/mpich/lib:$LD_LIBRARY_PATH
+
 WORKDIR /dmtk
 #RUN cd /dmtk && git clone --depth=1 -b multiverso-initial https://github.com/Microsoft/multiverso multiverso && \
 #    cd multiverso && \
