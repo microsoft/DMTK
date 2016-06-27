@@ -3,6 +3,8 @@
 Distributed Machine Learning Toolkit [http://www.dmtk.io](http://www.dmtk.io)
 Please open issues in the project below. For any technical support email to [dmtk@microsoft.com](mailto:dmtk@microsoft.com)
 
+# News
+
 DMTK includes the following projects:
 * [DMTK framework(Multiverso)](https://github.com/Microsoft/multiverso): The parameter server framework for distributed machine learning.
 * [LightLDA](https://github.com/Microsoft/lightlda): Scalable, fast and lightweight system for large-scale topic modeling.
