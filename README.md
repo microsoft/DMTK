@@ -5,6 +5,10 @@ Please open issues in the project below. For any technical support email to [dmt
 
 # News
 
+*** 2016-07-05 ***
+* Multiverso has been upgrade to new API.[Overview](https://github.com/Microsoft/multiverso/wiki/Overview)
+* Deep learning framework (torch/theano) support has been added.
+
 DMTK includes the following projects:
 * [DMTK framework(Multiverso)](https://github.com/Microsoft/multiverso): The parameter server framework for distributed machine learning.
 * [LightLDA](https://github.com/Microsoft/lightlda): Scalable, fast and lightweight system for large-scale topic modeling.
