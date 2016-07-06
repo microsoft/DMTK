@@ -3,11 +3,12 @@
 Distributed Machine Learning Toolkit [http://www.dmtk.io](http://www.dmtk.io)
 Please open issues in the project below. For any technical support email to [dmtk@microsoft.com](mailto:dmtk@microsoft.com)
 
-# News
+# Updates
 
-*** 2016-07-05 ***
+## 2016-07-05 
 * Multiverso has been upgrade to new API.[Overview](https://github.com/Microsoft/multiverso/wiki/Overview)
-* Deep learning framework (torch/theano) support has been added.
+* Deep learning framework ([torch](https://github.com/Microsoft/multiverso/wiki/Multiverso-Torch-Binding-Benchmark)/[theano](https://github.com/Microsoft/multiverso/wiki/Multiverso-Python-Binding-Benchmark)) support has been added.
+* Python/Lua bidding has been supported, you can using multiverso with [Python](https://github.com/Microsoft/multiverso/wiki/Multiverso-Python-Theano-Lasagne-Binding)/[Lua](https://github.com/Microsoft/multiverso/wiki/Multiverso-Torch-Lua-Binding).
 
 DMTK includes the following projects:
 * [DMTK framework(Multiverso)](https://github.com/Microsoft/multiverso): The parameter server framework for distributed machine learning.
