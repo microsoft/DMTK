@@ -3,14 +3,6 @@ MAINTAINER lyysdy@foxmail.com
 
 USER root
 
-RUN cd /dmtk/multiverso/Applications/WordEmbedding \
-&& cmake ./CMakeLists.txt \
-&& make 
-
-RUN cd /dmtk/multiverso/Applications/LogisticRegression \
-&& cmake ./CMakeLists.txt \
-&& make
-
 RUN cd /dmtk/mulitverso/binding/python \
 &&  python setup.py install 
 
