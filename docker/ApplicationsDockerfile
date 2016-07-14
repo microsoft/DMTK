@@ -1,0 +1,18 @@
+FROM lyysdy/dmtk:multiverso-v2
+MAINTAINER lyysdy@foxmail.com
+
+USER root
+
+RUN cd /dmtk/multiverso/Applications/WordEmbedding \
+&& cmake ./CMakeLists.txt \
+&& make \
+&& cd /dmtk/multiverso/Applications/LogisticRegression \
+&& cmake ./CMakeLists.txt \
+&& make
+
+RUN cd /dmtk/mulitverso/binding/python \
+&&  python setup.py install 
+
+RUN cd /dmtk/mulitverso/binding/lua \
+&& make install \
+&& make test
