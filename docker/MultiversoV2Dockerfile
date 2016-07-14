@@ -11,4 +11,9 @@ RUN cd /dmtk && git clone https://github.com/Microsoft/multiverso.git && cd mult
 && make \
 && cd /dmtk/multiverso/Applications/LogisticRegression \
 && cmake ./CMakeLists.txt \
-&& make
+&& make \
+&& cd /dmtk/mulitverso/binding/python \
+&& sudo python setup.py install 
+#&& cd /dmtk/mulitverso/binding/lua \
+#&& make install \
+#&& make test

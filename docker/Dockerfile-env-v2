@@ -23,7 +23,9 @@ RUN apt-get update \
        git \
        libopenmpi-dev \
        openmpi-bin \
-       cmake
+       cmake \
+       gfortran \
+       python-nose
 
 # java
 RUN mkdir -p /usr/local/java/default && \
