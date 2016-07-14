@@ -5,4 +5,10 @@ USER root
 
 RUN cd /dmtk && git clone https://github.com/Microsoft/multiverso.git && cd multiverso \
 && mkdir build && cd build \
-&& cmake .. && make && sudo make install
+&& cmake .. && make && sudo make install \
+&& cd /dmtk/multiverso/Applications/WordEmbedding \
+&& cmake ./CMakeLists.txt \
+&& make \
+&& cd /dmtk/multiverso/Applications/LogisticRegression \
+&& cmake ./CMakeLists.txt \
+&& make
