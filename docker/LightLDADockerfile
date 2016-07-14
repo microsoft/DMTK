@@ -1,4 +1,4 @@
-FROM lyysdy/dmtk:only-env
+FROM lyysdy/dmtk:env-v1
 MAINTAINER lyysdy@foxmail.com
 
 USER root
