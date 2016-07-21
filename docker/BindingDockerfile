@@ -9,3 +9,4 @@ RUN cd /dmtk/mulitverso/binding/python \
 RUN cd /dmtk/mulitverso/binding/lua \
 && make install \
 && make test
+
