@@ -6,3 +6,10 @@ USER root
 RUN cd /dmtk && git clone https://github.com/Microsoft/multiverso.git && cd multiverso \
 && mkdir build && cd build \
 && cmake .. && make && make install 
+
+RUN cd /dmtk/mulitverso/binding/python \
+&&  python setup.py install 
+
+RUN cd /dmtk/mulitverso/binding/lua \
+&& make install \
+&& make test
