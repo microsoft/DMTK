@@ -86,15 +86,31 @@ ENV LUA_CPATH='/root/torch/install/lib/?.so;'$LUA_CPATH
 WORKDIR /dmtk
    
 RUN cd /dmtk && git clone https://github.com/Microsoft/multiverso.git && cd multiverso \
-&& mkdir build && cd build \
-&& cmake .. && make && make install 
+	&& mkdir build && cd build \
+	&& cmake .. && make && make install 
 
+# python tests
 RUN cd /dmtk/multiverso/binding/python \
-&&  python setup.py install 
+	&& python setup.py install \
+	&& nosetests
 
+# lua tests
 RUN cd /dmtk/multiverso/binding/lua \
-&& make install \
-&& make test
+	&& make install \
+	&& make test
+
+# run cpp tests
+RUN cd /dmtk/multiverso/build \
+   && mpirun -np 4 ./Test/multiverso.test kv \
+   && mpirun -np 4 ./Test/multiverso.test array \
+   && mpirun -np 4 ./Test/multiverso.test net \
+   && mpirun -np 4 ./Test/multiverso.test ip \
+   && mpirun -np 4 ./Test/multiverso.test checkpoint \
+   && mpirun -np 4 ./Test/multiverso.test restore \
+   && mpirun -np 4 ./Test/multiverso.test allreduce
+# - mpirun -np 4 ./Test/multiverso.test matrix  # TODO the matrix test won't stop
+# - mpirun -np 4 ./Test/multiverso.test TestSparsePerf # TODO TestSparsePerf takes too much time
+# - mpirun -np 4 ./Test/multiverso.test TestDensePerf # TODO TestDensePerf takes too much time
 
 # clean unnessary packages
 RUN apt-get clean \
