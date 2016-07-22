@@ -89,10 +89,10 @@ RUN cd /dmtk && git clone https://github.com/Microsoft/multiverso.git && cd mult
 && mkdir build && cd build \
 && cmake .. && make && make install 
 
-RUN cd /dmtk/mulitverso/binding/python \
+RUN cd /dmtk/multiverso/binding/python \
 &&  python setup.py install 
 
-RUN cd /dmtk/mulitverso/binding/lua \
+RUN cd /dmtk/multiverso/binding/lua \
 && make install \
 && make test
 
