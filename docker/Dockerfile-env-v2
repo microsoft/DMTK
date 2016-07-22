@@ -61,6 +61,7 @@ RUN rm  /usr/local/hadoop/lib/native/* \
 
 # install Theano-dev
 $ RUN mkdir -p /theano \
+    && cd /theano \
     && git clone git://github.com/Theano/Theano.git \
     && cd /theano/Theano \
     && python setup.py develop
