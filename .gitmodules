@@ -10,3 +10,6 @@
 [submodule "distributed_skipgram_mixture"]
 	path = distributed_skipgram_mixture
 	url = https://github.com/Microsoft/distributed_skipgram_mixture
+[submodule "LightGBM"]
+	path = LightGBM
+	url = https://github.com/Microsoft/LightGBM.git
