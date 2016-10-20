@@ -1,3 +1,4 @@
+
 # DMTK
 
 Distributed Machine Learning Toolkit [http://www.dmtk.io](http://www.dmtk.io)
@@ -13,6 +14,9 @@ DMTK includes the following projects:
 # Updates
 ## 2016-10-17 
 * [LightGBM](https://github.com/Microsoft/lightGBM) has been released. which is a fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms, used for ranking, classification and many other machine learning tasks. 
+
+## 2016-09-12
+* A talk on the latest updates of DMTK is presented on [GTC China](http://www.gputechconf.cn/page/home.html). We also described the latest research work from our team, including the lightRNN(to be appeared in NIPS2016) and [DC-ASGD](https://arxiv.org/abs/1609.08326). 
 
 ## 2016-07-05 
 * Multiverso has been upgrade to new API.[Overview](https://github.com/Microsoft/multiverso/wiki/Overview)
