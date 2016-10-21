@@ -1,7 +1,7 @@
-[submodule "multiverso"]
+[submodule "Multiverso"]
 	path = multiverso
 	url = https://github.com/Microsoft/multiverso
-[submodule "lightlda"]
+[submodule "LightLDA"]
 	path = lightlda
 	url = https://github.com/Microsoft/lightlda
 [submodule "distributed_word_embedding"]
