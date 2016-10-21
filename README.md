@@ -7,9 +7,10 @@ Please open issues in the project below. For any technical support email to [dmt
 DMTK includes the following projects:
 * [DMTK framework(Multiverso)](https://github.com/Microsoft/multiverso): The parameter server framework for distributed machine learning.
 * [LightLDA](https://github.com/Microsoft/lightlda): Scalable, fast and lightweight system for large-scale topic modeling.
-* [Distributed word embedding](https://github.com/Microsoft/distributed_word_embedding): Distributed algorithm for word embedding.
-* [Distributed skipgram mixture](https://github.com/Microsoft/distributed_skipgram_mixture): Distributed algorithm for multi-sense word embedding.
 * [LightGBM](https://github.com/Microsoft/lightGBM): LightGBM is a fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms, used for ranking, classification and many other machine learning tasks. 
+* [Distributed word embedding](https://github.com/Microsoft/multiverso/tree/master/Applications/WordEmbedding): Distributed algorithm for word embedding.
+* [Distributed skipgram mixture](https://github.com/Microsoft/distributed_skipgram_mixture): Distributed algorithm for multi-sense word embedding. (deprecated)
+
 
 # Updates
 ## 2016-10-17 
