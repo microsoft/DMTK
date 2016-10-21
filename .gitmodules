@@ -1,9 +1,3 @@
-[submodule "Multiverso"]
-	path = Multiverso
-	url = https://github.com/Microsoft/multiverso
-[submodule "LightLDA"]
-	path = LightLDA
-	url = https://github.com/Microsoft/lightlda
 [submodule "LightGBM"]
 	path = LightGBM
 	url = https://github.com/Microsoft/LightGBM.git
