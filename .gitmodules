@@ -4,12 +4,6 @@
 [submodule "LightLDA"]
 	path = lightlda
 	url = https://github.com/Microsoft/lightlda
-[submodule "distributed_word_embedding"]
-	path = distributed_word_embedding
-	url = https://github.com/Microsoft/distributed_word_embedding
-[submodule "distributed_skipgram_mixture"]
-	path = distributed_skipgram_mixture
-	url = https://github.com/Microsoft/distributed_skipgram_mixture
 [submodule "LightGBM"]
 	path = LightGBM
 	url = https://github.com/Microsoft/LightGBM.git
