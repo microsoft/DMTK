@@ -15,7 +15,6 @@ DMTK includes the following projects:
 
 # Updates
 ## 2016-11-21 
-18
 * [Multiverso](https://github.com/Microsoft/multiverso) has been officially used in Microsoft [CNTK](http://github.com/microsoft/cntk) to power its ASGD parallel training.  
 
 ## 2016-10-17 
