@@ -14,6 +14,10 @@ DMTK includes the following projects:
 
 
 # Updates
+## 2016-11-21 
+18
+* [Multiverso](https://github.com/Microsoft/multiverso) has been officially used in Microsoft [CNTK](http://github.com/microsoft/cntk) to power its ASGD parallel training.  
+
 ## 2016-10-17 
 * [LightGBM](https://github.com/Microsoft/lightGBM) has been released. which is a fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms, used for ranking, classification and many other machine learning tasks. 
 
