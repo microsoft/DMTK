@@ -14,6 +14,9 @@ DMTK includes the following projects:
 
 
 # Updates
+## 2017-02-04
+* a tutorial on the latests updates of Distributed Machine Learning is presented on [AAAI 2017](http://www.aaai.org/Conferences/AAAI/aaai17.php). you can download the slides [here](http://www.dmtk.io/tutorial_on_aaai2017.html).
+
 ## 2016-11-21 
 * [Multiverso](https://github.com/Microsoft/multiverso) has been officially used in Microsoft [CNTK](http://github.com/microsoft/cntk) to power its ASGD parallel training.  
 
