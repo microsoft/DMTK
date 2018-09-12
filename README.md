@@ -1,7 +1,7 @@
 
 # DMTK
 
-Distributed Machine Learning Toolkit [https://www.dmtk.io](https://www.dmtk.io)
+Distributed Machine Learning Toolkit [http://www.dmtk.io](http://www.dmtk.io)
 Please open issues in the project below. For any technical support email to [dmtk@microsoft.com](mailto:dmtk@microsoft.com)
 
 DMTK includes the following projects:
@@ -14,10 +14,10 @@ DMTK includes the following projects:
 
 # Updates
 ## 2017-02-04
-* A tutorial on the latests updates of Distributed Machine Learning is presented on [AAAI 2017](https://www.aaai.org/Conferences/AAAI/aaai17.php). you can download the slides [here](https://www.dmtk.io/tutorial_on_aaai2017.html).
+* A tutorial on the latests updates of Distributed Machine Learning is presented on [AAAI 2017](http://www.aaai.org/Conferences/AAAI/aaai17.php). you can download the slides [here](http://www.dmtk.io/tutorial_on_aaai2017.html).
 
 ## 2016-11-21 
-* [Multiverso](https://github.com/Microsoft/multiverso) has been officially used in Microsoft [CNTK](https://github.com/microsoft/cntk) to power its ASGD parallel training.  
+* [Multiverso](https://github.com/Microsoft/multiverso) has been officially used in Microsoft [CNTK](http://github.com/microsoft/cntk) to power its ASGD parallel training.  
 
 ## 2016-10-17 
 * [LightGBM](https://github.com/Microsoft/lightGBM) has been released. which is a fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms, used for ranking, classification and many other machine learning tasks. 
